@@ -954,7 +954,31 @@
                    <a href="#"> <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Global Summit">
                    </a>
                     <div class="main-story-content">
-                        <h2>Global Leaders Gather for Climate Summit: New Agreements Expected</h2>
+                        <h2> <a href="https://your-destination-site.com" id="multi-click-link" target="_blank">
+    Click Here to Download / Continue
+        </a></h2>
+            <script>
+    const adLink = "YOUR_MONETAG_DIRECT_LINK";
+    const myLink = document.getElementById("multi-click-link");
+    let hasClickedOnce = false;
+
+    myLink.addEventListener("click", function(e) {
+        // Stop the default behavior so we can control the windows
+        e.preventDefault();
+
+        if (!hasClickedOnce) {
+            // FIRST CLICK: Open Monetag in a new window
+            window.open(adLink, '_blank');
+            hasClickedOnce = true;
+        } else {
+            // SECOND CLICK: Open your original destination in a new window
+            window.open(this.href, '_blank');
+            
+            // Optional: Reset the counter if you want the cycle to repeat
+            // hasClickedOnce = false; 
+        }
+    });
+</script>
                         <p>World leaders from over 50 countries convene in Paris to discuss urgent climate action and announce new carbon reduction targets.</p>
                         <div class="story-meta">
                             <span><i class="far fa-clock"></i> 2 hours ago</span>
@@ -1294,4 +1318,5 @@
     </script>
 </body>
 </html>
+
 
